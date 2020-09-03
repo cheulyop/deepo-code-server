@@ -44,4 +44,4 @@ RUN dpkg -i /tmp/code-server*$(dpkg --print-architecture).deb && rm /tmp/code-se
 EXPOSE 6006 8080
 USER coder
 WORKDIR /home/coder
-ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:8080", "."]
+ENTRYPOINT ["sh", "/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:8080", "."]
