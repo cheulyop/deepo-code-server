@@ -41,6 +41,8 @@ RUN ARCH="$(dpkg --print-architecture)" && \
 COPY release-packages/code-server*.deb /tmp/
 COPY src/entrypoint.sh /usr/bin/entrypoint.sh
 RUN dpkg -i /tmp/code-server*$(dpkg --print-architecture).deb && rm /tmp/code-server*.deb
+# Add execution permission to entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint.sh
 
 # Need port 6006 for tensorboard
 EXPOSE 6006 8080
