@@ -1,6 +1,8 @@
 # deepo-code-server
 
-Combines [code-server v3.7.1](https://github.com/cdr/code-server) with [Deepo](https://github.com/ufoym/deepo) for quick and easy deep learning research.
+Combines [code-server](https://github.com/cdr/code-server) with [Deepo](https://github.com/ufoym/deepo) for quick and easy deep learning research.
+
+Current code-server version is v3.7.3 with VS Code 1.51.1.
 
 Uses [`cheulyop/deepo:latest`](https://hub.docker.com/repository/docker/cheulyop/deepo) as a base image, which includes:
 * Ubuntu 18.04
