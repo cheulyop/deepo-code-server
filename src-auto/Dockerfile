@@ -25,10 +25,6 @@ RUN mkdir -p ~/.local/share/code-server/ && \
 RUN wget https://github.com/microsoft/vscode-python/releases/download/2020.10.332292344/ms-python-release.vsix && \
     code-server --install-extension ./ms-python-release.vsix || true
 
-# Copy and add execution permission to entrypoint.sh
-COPY src/entrypoint.sh /usr/bin/entrypoint.sh
-RUN chmod +x /usr/bin/entrypoint.sh
-
 # Need port 6006 for tensorboard
 EXPOSE 6006 8080
 
@@ -38,4 +34,4 @@ EXPOSE 6006 8080
 USER 1000
 ENV USER=coder
 WORKDIR /home/coder
-ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:8080", "."]
+ENTRYPOINT [ "code-server", "--bind-addr=0.0.0.0:8080", "--auth=none", "--log=trace"]
