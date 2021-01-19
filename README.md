@@ -2,14 +2,6 @@
 
 Combines [code-server](https://github.com/cdr/code-server) with [Deepo](https://github.com/ufoym/deepo) for quick and easy deep learning research.
 
-Current code-server version is v3.7.3 with VS Code 1.51.1.
+Current version is code-server v3.8.0 with VSCode v1.51.1.
 
-Uses [`cheulyop/deepo:latest`](https://hub.docker.com/repository/docker/cheulyop/deepo) as a base image, which includes:
-* Ubuntu 18.04
-* CUDA 10.2 and cuDNN 8
-* Python 3.8
-* Pytorch (latest)
-* TensorFlow (latest)
-* ONNX (latest)
-
-For any questions or issues, refer to official repositories and documentations.
+Uses [`cheulyop/deepo:latest`](https://hub.docker.com/repository/docker/cheulyop/deepo) as a base image.
